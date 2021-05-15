@@ -26,8 +26,5 @@ jobs:
       id: step_one
       run: |
        echo export UPSTREAM_BUILD_NUMBER = $((11581 + 5))
-    - name: Use the value
-      id: step_two
-      run: |
-        echo $UPSTREAM_BUILD_NUMBER # This will output 'build number
-
+       echo $UPSTREAM_BUILD_NUMBER # This will output 'build number
+       echo printenv UPSTREAM_BUILD_NUMBER # printvar
