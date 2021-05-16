@@ -25,6 +25,7 @@ jobs:
     - name: Set the value
       id: step_one
       run: |
-       export UPSTREAM_BUILD_NUMBER = "$((11581 + ${{ github.run_number }}))"
+       UPSTREAM_BUILD_NUMBER = "$((11581 + ${{ github.run_number }}))"
+       export UPSTREAM_BUILD_NUMBER
        UPSTREAM_BUILD_NUMBER # This will output 'build number
        printenv UPSTREAM_BUILD_NUMBER # printvar
